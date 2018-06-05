@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -88,16 +88,70 @@
                     <view key="view" contentMode="scaleToFill" id="g35-x4-V0p" customClass="GradientView" customModule="SlackClone" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fll-hB-Lfs">
+                                <rect key="frame" x="16" y="40" width="54.5" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qff-f0-vzr">
+                                <rect key="frame" x="16" y="86" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2h-fQ-uP8">
+                                <rect key="frame" x="281" y="85.5" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xx7-AW-BId">
+                                <rect key="frame" x="115" y="593.5" width="43" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="onV-v3-wyV">
+                                <rect key="frame" x="20" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="4TL-tH-388"/>
+                                    <constraint firstAttribute="height" constant="75" id="dc0-m3-TpG"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lVD-ir-mkI">
+                                <rect key="frame" x="0.0" y="127.5" width="375" height="424.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n2h-fQ-uP8" firstAttribute="centerY" secondItem="qff-f0-vzr" secondAttribute="centerY" id="8f2-I4-fnX"/>
+                            <constraint firstItem="15j-d0-Lys" firstAttribute="bottom" secondItem="onV-v3-wyV" secondAttribute="bottom" constant="20" id="DyL-uY-zKf"/>
+                            <constraint firstItem="onV-v3-wyV" firstAttribute="top" secondItem="lVD-ir-mkI" secondAttribute="bottom" constant="20" id="EeA-Th-Lf9"/>
+                            <constraint firstItem="lVD-ir-mkI" firstAttribute="top" secondItem="n2h-fQ-uP8" secondAttribute="bottom" constant="20" id="J19-CV-Uyn"/>
+                            <constraint firstItem="fll-hB-Lfs" firstAttribute="top" secondItem="15j-d0-Lys" secondAttribute="top" constant="20" id="JAy-cm-Hv8"/>
+                            <constraint firstItem="qff-f0-vzr" firstAttribute="leading" secondItem="15j-d0-Lys" secondAttribute="leading" constant="16" id="Krw-HT-cia"/>
+                            <constraint firstItem="fll-hB-Lfs" firstAttribute="leading" secondItem="15j-d0-Lys" secondAttribute="leading" constant="16" id="UP7-fW-ljw"/>
+                            <constraint firstItem="Xx7-AW-BId" firstAttribute="centerY" secondItem="onV-v3-wyV" secondAttribute="centerY" id="aho-vY-fWL"/>
+                            <constraint firstItem="15j-d0-Lys" firstAttribute="trailing" secondItem="n2h-fQ-uP8" secondAttribute="trailing" constant="72" id="mwL-g5-zNM"/>
+                            <constraint firstItem="Xx7-AW-BId" firstAttribute="leading" secondItem="onV-v3-wyV" secondAttribute="trailing" constant="20" id="rqt-dH-QFv"/>
+                            <constraint firstItem="lVD-ir-mkI" firstAttribute="leading" secondItem="15j-d0-Lys" secondAttribute="leading" id="sX4-iz-Y9h"/>
+                            <constraint firstItem="qff-f0-vzr" firstAttribute="top" secondItem="fll-hB-Lfs" secondAttribute="bottom" constant="20" id="szb-aF-Q0z"/>
+                            <constraint firstItem="lVD-ir-mkI" firstAttribute="trailing" secondItem="15j-d0-Lys" secondAttribute="trailing" id="vfg-2s-QTK"/>
+                            <constraint firstItem="onV-v3-wyV" firstAttribute="leading" secondItem="15j-d0-Lys" secondAttribute="leading" constant="20" id="zfE-97-BFb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="15j-d0-Lys"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVT-J9-wsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="-52"/>
+            <point key="canvasLocation" x="1092" y="-52.623688155922046"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="menuProfileIcon" width="99" height="99"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
